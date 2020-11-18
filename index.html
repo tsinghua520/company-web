@@ -33,7 +33,7 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><a><img src="./image/banner.png" /></a></div>
-          <div class="swiper-slide"><a><img src="./image/banner.png" /></a></div>
+          <div class="swiper-slide"><a><img src="./image/banner1.png" /></a></div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -43,16 +43,16 @@
       </div>
     </div>
     <script>
-      // var swiper = new Swiper('.banner .swiper-container', {
-      //   pagination: '.header .swiper-pagination',
-      //   paginationClickable: true,
-      //   nextButton: '.header .swiper-button-next',
-      //   prevButton: '.header .swiper-button-prev',
-      //   autoplay: 3000,
-      //   loop: true
-      // });
       // ，锚点滚动
       $(function(){
+        var swiper = new Swiper('.banner .swiper-container', {
+          pagination: '.header .swiper-pagination',
+          paginationClickable: true,
+          nextButton: '.header .swiper-button-next',
+          prevButton: '.header .swiper-button-prev',
+          autoplay: 0,
+          loop: true
+        });
         $('a[href*=#],area[href*=#]').click(function() {  
           console.log(this.pathname)  
           if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
