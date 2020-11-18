@@ -57,3 +57,25 @@ div {box-sizing: border-box;}
 .copy .fr span{display: block;line-height: 20px;}
 .copy .fr span:nth-child(1){color: #666;}
 .copy .fr span:nth-child(2){color: #333;font-weight: 600;font-size: 14px;}
+
+/* 主图 */
+.main-i {width: calc(100% - 180px);margin-left: 180px; padding: 0 20px 0}
+
+/* service-list */
+.date {width: calc(100% - 40px);margin: 0 auto; padding: 30px 0 60px 180px;}
+.date-t { font-size: 16px; font-weight: 600;margin-bottom: 20px; border-bottom: 1px solid #ccc; padding: 10px 0 10px;}
+.date-list {width: 60%;margin-left: 40%; display: flex;flex-wrap: wrap;justify-content: space-between;;}
+.date-list > div {width: 30%;margin-bottom: 20px}
+.date-list > div img {width: 100%;}
+
+/* detail */
+.detail {width: calc(100% - 40px);margin: 0 auto; padding: 30px 0 60px 180px;}
+.detail-l {width: 50%;float: left;}
+.detail-r {width: 50%;float: right;}
+
+/* list-img" */
+.list-img {width: calc(100% - 20px);margin: 0 0 0 20px; padding: 30px 0 60px 180px;}
+.img-list {width: calc(100% - 180px);background-color: #eee;overflow: scroll;}
+.img-list div {width: 2000px;}
+.img-list > div > div {width: 200px; display: inline-block;}
+.img-list > div > div:not(1) {margin-left: 2%;}
