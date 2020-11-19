@@ -1,0 +1,29 @@
+
+@font-face {
+  font-family: 'ali-Light';
+  font-display: swap;
+  src: url('../font/Alibaba-PuHuiTi-Light.otf'); /* IE9 */
+}
+
+@font-face {
+  font-family: 'ali-Heavy';
+  font-display: swap;
+  src: url('../font/Alibaba-PuHuiTi-Heavy.otf'); /* IE9 */
+}
+@font-face {
+  font-family: 'ali-Medium';
+  font-display: swap;
+  src: url('../font/Alibaba-PuHuiTi-Medium.otf'); /* IE9 */
+ 
+}
+@font-face {
+  font-family: 'ali-Bold';
+  font-display: swap;
+  src: url('../font/Alibaba-PuHuiTi-Bold.otf'); /* IE9 */
+}
+@font-face {
+  font-family: 'ali-Regular';
+  font-display: swap;
+  src: url('../font/Alibaba-PuHuiTi-Regular.otf'); /* IE9 */
+}
+

@@ -2,25 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>xxx公司</title>
+<title>衡邑</title>
 <meta name="keywords" content="xxx公司" />
 <meta name="description" content="xxx" />
-<!-- <link rel="icon shortcuticon" type="image/png" href=""> -->
+<link rel="icon shortcuticon" type="image/png" href="./favicon.ico">
+<link href="./css/font.css" rel="stylesheet" type="text/css" />
 <link href="./css/css.css" rel="stylesheet" type="text/css" />
 <script src="./js/jquery-1.8.3.min.js"></script>
 <script src="./js/swiper.min.js"></script>
+
 </head>
 <body>
   <div class="box">
     <a id="home"></a>
     <!-- header -->
-    <div class="header ov">
+    <div class="header clear">
       <div class="header-l fl">
         <img src="./image/logo.png" alt="">
       </div>
       <div class="header-r fr ov">
         <div class="fl">Event | Digital | PR | Marketing Solution</div>
-        <div class="fr">
+        <div class="fr line">
           <span></span>
           <span></span>
         </div>
@@ -42,31 +44,6 @@
         <div class="swiper-button-next swiper-button"></div>
       </div>
     </div>
-    <script>
-      // ，锚点滚动
-      $(function(){
-        var swiper = new Swiper('.banner .swiper-container', {
-          pagination: '.header .swiper-pagination',
-          paginationClickable: true,
-          nextButton: '.header .swiper-button-next',
-          prevButton: '.header .swiper-button-prev',
-          autoplay: 0,
-          loop: true
-        });
-        $('a[href*=#],area[href*=#]').click(function() {  
-          console.log(this.pathname)  
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
-              var $target = $(this.hash);  
-              $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');  
-              if ($target.length) {  
-                var targetOffset = $target.offset().top-50;  
-                $('html,body').animate({ scrollTop: targetOffset}, 1000);  
-                return false;  
-              }  
-          }  
-        }); 
-      })
-    </script>
     <!-- banner -->
     <!-- server -->
     <a id="service"></a>
@@ -78,13 +55,13 @@
         </div>
         <div class="title">
           <span>SPACE</span>
-          <a href="#">Details</a>
+          <a href="./service.html">Details</a>
         </div>
       </div>
       <div class="service-list service-left">
-        <div class="title">
+        <div class="title pr5">
           <span>GRAPHIC</span>
-          <a href="#">Details</a>
+          <a href="./service.html">Details</a>
         </div>
         <div class="service-img">
           <img src="./image/graphic.png" />
@@ -96,7 +73,7 @@
         </div>
         <div class="title">
           <span>BRANDING</span>
-          <a href="#">Details</a>
+          <a href="./service.html">Details</a>
         </div>
       </div>
     </div>
@@ -105,10 +82,9 @@
     <!-- clients -->
     <div class="service clients ov">
       <div class="service-t">Clients</div>
-      <div class="service-list service-left">
-        <div class="title">
-          <span>GRAPHIC</span>
-          <a href="#">Details</a>
+      <div class="service-list mt38 service-left">
+        <div class="title mb20">
+          <span>SERVICE<br>BRAND</span>
         </div>
         <div class="service-img">
           <img src="./image/clients.png" />
@@ -117,42 +93,35 @@
     </div>
     <!-- clients -->
     <!-- footer -->
-    <div class="footer ov">
-      <div class="fl">
-        <img src="./image/logo.png" alt="">
-        <a href="#home">HOME</a>
-        <a href="#service">SERVICE</a>
-        <a href="#client">CLIENTS</a>
-        <a href="#contact">CONTACT</a>
+    <div class="footer">
+      <div class="ov">
+        <div class="fl"><img src="./image/logo.png" alt=""></div>
+        <div class="fr"><img src="./image/time.png" alt=""></div>
       </div>
-      <div class="fr">
-        <div>
-          <img src="./image/time.png" alt="">
+      <div class="ov">
+        <div class="fl">
+          <a href="#home">HOME</a>
+          <a href="#service">SERVICE</a>
+          <a href="#client">CLIENTS</a>
+          <a href="#contact">CONTACT</a>
         </div>
-        <div>
+        <div class="fr">
           <img src="./image/qrcode.png" alt="">
         </div>
       </div>
     </div>
     <!-- footer -->
     <a id="contact"></a>
-    <!-- footer -->
+    <!-- copy -->
     <div class="copy ov">
       <div class="fl">HENG-E ADVERTISING LIMITED</div>
       <div class="fr">
-        <span>E-mail</span>
-        <span>xxxxxxxxxxx@Heng-e.com</span>
-      </div>
-      <div class="fr">
-        <span>Phone</span>
-        <span>+1380 000 0000</span>
+        <a href="#">沪ICP备xxxxxxxx号</a>
       </div>
     </div>
-    <!-- footer -->
+    <!-- copy -->
   </div>
-  
-  <script type="text/javascript">
-    
-  </script>
+  <!-- <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script> -->
+  <script src="./js/index.js"></script>
 </body>
 </html>
