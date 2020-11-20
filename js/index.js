@@ -1,13 +1,5 @@
 $(function(){
-  // 首页轮播图
-  var swiper = new Swiper('.banner .swiper-container', {
-    pagination: '.header .swiper-pagination',
-    paginationClickable: true,
-    nextButton: '.header .swiper-button-next',
-    prevButton: '.header .swiper-button-prev',
-    autoplay: 0,
-    loop: true
-  });
+  
   // 锚点滚动
   $('a[href*=#],area[href*=#]').click(function() {  
     console.log(this.pathname)  
@@ -28,11 +20,38 @@ $(function(){
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res)
+      console.log(res.index)
+      if (res.code == 0) {
+        var ims = res.index
+        initSwiper(ims.fileList)
+        $('#space').attr('src', ims.spaceImg)
+        $('#graphic').attr('src', ims.graphicImg)
+        $('#branding').attr('src', ims.brandingImg)
+        $('#clientsImg').attr('src', ims.pcBrandImg)
+      }
     },
     error: function() {
         ClosetoastLoading();
         errorTip();
     }
   });
+
+  function initSwiper(fileList) {
+    var swiperStr = ''
+    for(var i=0; i<fileList.length; i++) {
+      console.log(fileList[i].url)
+      swiperStr += '<div class="swiper-slide"><a><img src="' + fileList[i].url + '" /></a></div>'
+    }
+    $("#swiper").html(swiperStr)
+    // 首页轮播图
+    var swiper = new Swiper('.banner .swiper-container', {
+      pagination: '.banner .swiper-pagination',
+      paginationClickable: true,
+      nextButton: '.header .swiper-button-next',
+      prevButton: '.header .swiper-button-prev',
+      autoplay: 0,
+      loop: true
+    });
+  }
+
 })

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>xxx公司</title>
-    <meta name="keywords" content="xxx公司" />
-    <meta name="description" content="xxx" />
+    <title>上海衡邑市场营销有限公司</title>
+    <meta name="keywords" content="上海衡邑市场营销有限公司" />
+    <meta name="description" content="衡邑市场营销是一家专注于线下场景的服务公司，通过创意策划，各类设计以及创意构思，为高要求客户提供线下流量获取和转化的综合服务，具体包括快闪店，专卖店，各类交互性活动，装置等从创意构思，设计规划，落地执行，数据回流的闭环服务，帮助品牌提升品牌形象的同时，扩大自身私域流量池，获得更多发展机会。" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="icon shortcuticon" type="image/png" href="./favicon.ico">
     <link rel="stylesheet" href="./css/font.css">
@@ -15,40 +15,16 @@
   <body>
     <div class="mobile" id="mobile">
       <div class="banner" id="banner" style="height: 600px;">
-        <img src="./image/m-banner1.png" />
+        <img id="mobileIndex" src="" />
       </div>
       <div class="m-content">
         <div>
-          <img src="./image/m-banner.png" />
+          <img id="mobileBanner" src="" />
         </div>
         <div class="title">SPACE</div>
         <div class="space">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="con-detail">
-                  <img src="./image/temp.png" />
-                  <div class="con-line">
-                    <div class="active"></div>
-                    <div></div>
-                  </div>
-                  <h2>Dior Fall Look</h2>
-                  <h3>港汇广场HPP台</h3>
-                  <p>DIOR FALL LOOK 使用两层展台结构，运用蓝色钛金板做整体造型，加上酷炫舞台灯光，打造轰动全城的现象ROADSHOW。</p>
-                </div>
-              </div>
-              <div class="swiper-slide con-detail">
-                <div class="con-detail">
-                  <img src="./image/temp.png" />
-                  <div class="con-line">
-                    <div></div>
-                    <div class="active"></div>
-                  </div>
-                  <h2>Dior Fall Look</h2>
-                  <h3>港汇广场HPP台</h3>
-                  <p>DIOR FALL LOOK 使用两层展台结构，运用蓝色钛金板做整体造型，加上酷炫舞台灯光，打造轰动全城的现象ROADSHOW。</p>
-                </div>
-              </div>
+          <div class="swiper-container swiper-container-space">
+            <div class="swiper-wrapper" id="space">
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -57,35 +33,33 @@
             <div class="swiper-button-next swiper-button"></div>
           </div>
         </div>
-        <script>
-          $(function(){
-            var swiper = new Swiper('.space .swiper-container', {
-              pagination: '.header .swiper-pagination',
-              paginationClickable: true,
-              nextButton: '.header .swiper-button-next',
-              prevButton: '.header .swiper-button-prev',
-              autoplay: 0,
-              loop: true
-            });
-          })
-        </script>
         <div class="title">GRAPHIC</div>
-        <div class="con-detail">
-          <img src="./image/temp.png" />
-          <h2>Dior Fall Look</h2>
-          <h3>港汇广场HPP台</h3>
-          <p>DIOR FALL LOOK 使用两层展台结构，运用蓝色钛金板做整体造型，加上酷炫舞台灯光，打造轰动全城的现象ROADSHOW。</p>
+        <div class="space">
+          <div class="swiper-container swiper-container-graphic">
+            <div class="swiper-wrapper" id="graphic">
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-prev swiper-button"></div>
+            <div class="swiper-button-next swiper-button"></div>
+          </div>
         </div>
         <div class="title">BRAND</div>
-        <div class="con-detail">
-          <img src="./image/temp.png" />
-          <h2>Dior Fall Look</h2>
-          <h3>港汇广场HPP台</h3>
-          <p>DIOR FALL LOOK 使用两层展台结构，运用蓝色钛金板做整体造型，加上酷炫舞台灯光，打造轰动全城的现象ROADSHOW。</p>
+        <div class="space">
+          <div class="swiper-container swiper-container-branding">
+            <div class="swiper-wrapper" id="branding">
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-prev swiper-button"></div>
+            <div class="swiper-button-next swiper-button"></div>
+          </div>
         </div>
         <div class="title">CLIENTS</div>
         <div class="clients-img">
-          <img src="./image/m-brand.png" />
+          <img id="mobileBrandImg" src="" />
         </div>
         <div class="bline"></div>
         <div class="bline-img">
@@ -95,9 +69,5 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript">
-    var ih = window.innerHeight
-    $('#mobile').css({'padding-top': ih + 'px'})
-    $('#banner').css({'height': ih + 'px'})
-  </script>
+  <script src="./js/mobile.js"></script>
 </html>
