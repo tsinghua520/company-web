@@ -28,6 +28,13 @@ $(function(){
         $('#graphic').attr('src', ims.graphicImg)
         $('#branding').attr('src', ims.brandingImg)
         $('#clientsImg').attr('src', ims.pcBrandImg)
+        var mao = location.href.indexOf('#')
+        if (mao > -1) {
+          var maoUrl = location.href.substring(mao)
+          setTimeout(function() {
+            location.href = maoUrl
+          }, 300)
+        }
       }
     },
     error: function() {
@@ -49,7 +56,7 @@ $(function(){
       paginationClickable: true,
       nextButton: '.header .swiper-button-next',
       prevButton: '.header .swiper-button-prev',
-      autoplay: 0,
+      autoplay: 5000,
       loop: true
     });
   }

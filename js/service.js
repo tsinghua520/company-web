@@ -52,9 +52,24 @@ $(function(){
     var listStr = ''
     for(var i=0;i<list.length;i++) {
       listStr += '<div class="date date2 ov"><div class="date-t">'+list[i].name+'</div><div class="date-list oh">'
-      for(var j=0;j<list[i].items.length;j++) {
-        listStr = listStr + '<div><img onclick="toDetail(\''+list[i].items[j].id+'\')" src="' + list[i].items[j].pcListImg + '" /></div>'
+      var temp = parseInt(list[i].items.length / 3)
+      if (list[i].items.length % 3 > 0) {
+        temp++
       }
+      for(var j=0; j<temp; j++) {
+        var tempStr = ''
+        for (var z=3;z>0;z--){
+          if (j*3 + z  <=list[i].items.length){
+            var idx = j*3 + z - 1
+            console.log(idx)
+            tempStr += '<div><img onclick="toDetail(\''+list[i].items[idx].id+'\')" src="' + list[i].items[idx].pcListImg + '" /></div>'
+          }
+        }
+        listStr += tempStr
+      }
+      // for(var j=0;j<list[i].items.length;j++) {
+      //   listStr = listStr + '<div><img onclick="toDetail(\''+list[i].items[j].id+'\')" src="' + list[i].items[j].pcListImg + '" /></div>'
+      // }
       listStr += '</div></div>'
     }
     $('#dataList').html(listStr)

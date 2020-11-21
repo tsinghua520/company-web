@@ -59,7 +59,7 @@ $(function(){
           swiperStr += '<div></div>'
         }
       }
-      swiperStr += '</div><h2>' +temp.pcName1+ '</h2><h3>' +temp.pcName2+ '</h3><h4>' +temp.pcName3+ '</h4>'
+      swiperStr += '</div><h2>' +temp.mobileName+ '</h2><h3>' +temp.mobileSubName+ '</h3>'
       swiperStr += '<p>' +temp.mobileDesc+ '</p>'
       swiperStr += '</div></div>'
     }
