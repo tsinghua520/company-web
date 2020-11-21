@@ -10,6 +10,9 @@
 <link href="./css/css.css" rel="stylesheet" type="text/css" />
 <script src="./js/jquery-1.8.3.min.js"></script>
 <script src="./js/swiper.min.js"></script>
+<style>
+  
+</style>
 </head>
 <body>
   <div class="box">
@@ -28,55 +31,45 @@
         <div class="fr">HENG-E ADVERTISING LIMITED</div>
       </div>
     </div>
-    <!-- header -->
-    <div class="main-i">
-      <img src="./image/demo.png" />
-    </div>
-    <!-- detail -->
-    <div class="detail ov">
-      <div class="detail-l">
-        <h3>Dior FAll Look</h3>
-        <p>港汇广场HPP台</p>
-        <p>xxxx</p>
-      </div>
-      <div class="detail-r">
-        DIOR FALL LOOk 使用两层展台结构，运用蓝色钛金板整体造型DIOR FALL LOOk 使用两层展台结构，运用蓝色钛金板整体造型
+    <div class="lbox ov">
+      <div class="detail-date fl" id="detailDate"></div>
+      <!-- header -->
+      <div class="detail-main-i fr">
+        <img id="pcHeadImg" src="" />
       </div>
     </div>
-    <!-- detail -->
-    <!-- detail-img -->
-    <div class="list-img">
-      <div class="img-operate fl"></div>
-      <div class="img-list fr">
-        <div>
-          <div><img src="./image/demo.png" /></div>
-          <div><img src="./image/demo.png" /></div>
-          <div><img src="./image/demo.png" /></div>
-          <div><img src="./image/demo.png" /></div>
-          <div><img src="./image/demo.png" /></div>
+    <div class="lbox">
+      <!-- detail -->
+      <div class="detail ov">
+        <div class="detail-l">
+          <h3 id="pcName1"></h3>
+          <p id="pcName2"></p>
+          <p id="pcName3"></p>
+        </div>
+        <div class="detail-r" id="pcDesc">
         </div>
       </div>
+      <!-- detail -->
+    </div>
+    <div class="detail-arrow">
+      <img onclick="changeLeft(1)" src="./image/arrow-l.png" />
+      <img onclick="changeLeft(-1)" src="./image/arrow-r.png" />
     </div>
     <!-- detail-img -->
-    <!-- footer -->
-    <div class="footer">
-      <div class="ov">
-        <div class="fl"><img src="./image/logo.png" alt=""></div>
-        <div class="fr"><img src="./image/time.png" alt=""></div>
-      </div>
-      <div class="ov">
-        <div class="fl">
-          <a href="#home">HOME</a>
-          <a href="#service">SERVICE</a>
-          <a href="#client">CLIENTS</a>
-          <a href="#contact">CONTACT</a>
-        </div>
-        <div class="fr">
-          <img src="./image/qrcode.png" alt="">
+    <div class="lbox">
+      <div class="img-box main-i" id="bw">
+        <div class="img-list-scroll" id="iw">
+          <div><img src="./image/demo.png" alt=""></div>
+          <div><img src="./image/demo.png" alt=""></div>
+          <div><img src="./image/demo.png" alt=""></div>
+          <div><img src="./image/demo.png" alt=""></div>
+          <div><img src="./image/demo.png" alt=""></div>
+          <div><img src="./image/demo.png" alt=""></div>
+          <div><img src="./image/demo.png" alt=""></div>
         </div>
       </div>
     </div>
-    <!-- footer -->
+    <!-- detail-img -->
     <a id="contact"></a>
     <!-- copy -->
     <div class="copy ov">
@@ -86,6 +79,7 @@
       </div>
     </div>
     <!-- copy -->
+    <div class="fixed-back" onclick="history.go(-1)"><img src="./image/back.png" alt="">BACK</div>
   </div>
   
   <script src="./js/detail.js"></script>
