@@ -8,14 +8,12 @@ $(function(){
   //请求首页banner数据
   $.ajax({
     type: "get",
-    url: 'https://wechat.heng-e.com.cn/platform-admin/hy/index/info/0',
+    url: 'https://www.heng-e.com.cn/platform-admin/hy/index/info/0',
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res.index)
       if (res.code == 0) {
         var ims = res.index
-        console.log(ims.mobileBanner)
         $('#mobileBanner').attr('src', ims.mobileBanner)
         $('#mobileIndex').attr('src', ims.mobileIndex)
         $('#mobileBrandImg').attr('src', ims.mobileBrandImg)
@@ -27,11 +25,10 @@ $(function(){
   // 请求首页明细轮播数据
   $.ajax({
     type: "get",
-    url: 'https://wechat.heng-e.com.cn/platform-admin/hy/advgroup/queryAllFront',
+    url: 'https://www.heng-e.com.cn/platform-admin/hy/advgroup/queryAllFront',
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res)
       if (res.code == 0) {
         initSwiper(res.data.SPACE, 'space')
         initSwiper(res.data.GRAPHIC, 'graphic')

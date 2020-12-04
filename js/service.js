@@ -1,15 +1,13 @@
 $(function(){
   
   var type = getQueryVariable('type')
-  console.log(type)
   //请求首页banner数据
   $.ajax({
     type: "get",
-    url: 'https://wechat.heng-e.com.cn/platform-admin/hy/index/info/0',
+    url: 'https://www.heng-e.com.cn/platform-admin/hy/index/info/0',
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res.index)
       if (res.code == 0) {
         var ims = res.index
         var bannerUrl = ''
@@ -29,11 +27,10 @@ $(function(){
   // 请求首页明细轮播数据
   $.ajax({
     type: "get",
-    url: 'https://wechat.heng-e.com.cn/platform-admin/hy/advgroup/queryAllFront',
+    url: 'https://www.heng-e.com.cn/platform-admin/hy/advgroup/queryAllFront',
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res)
       if (res.code == 0) {
         if (type==2) {
           initList(res.data.GRAPHIC)
@@ -48,7 +45,6 @@ $(function(){
     }
   });
   function initList(list){
-    console.log(list)
     var listStr = ''
     for(var i=0;i<list.length;i++) {
       listStr += '<div class="date date2 ov"><div class="date-t">'+list[i].name+'</div><div class="date-list oh">'
@@ -61,7 +57,6 @@ $(function(){
         for (var z=3;z>0;z--){
           if (j*3 + z  <=list[i].items.length){
             var idx = j*3 + z - 1
-            console.log(idx)
             tempStr += '<div><img onclick="toDetail(\''+list[i].items[idx].id+'\')" src="' + list[i].items[idx].pcListImg + '" /></div>'
           }
         }

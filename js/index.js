@@ -2,7 +2,6 @@ $(function(){
   
   // 锚点滚动
   $('a[href*=#],area[href*=#]').click(function() {  
-    console.log(this.pathname)  
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {  
         var $target = $(this.hash);  
         $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');  
@@ -16,11 +15,10 @@ $(function(){
   //请求数据
   $.ajax({
     type: "get",
-    url: 'https://wechat.heng-e.com.cn/platform-admin/hy/index/info/0',
+    url: 'https://www.heng-e.com.cn/platform-admin/hy/index/info/0',
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res.index)
       if (res.code == 0) {
         var ims = res.index
         initSwiper(ims.fileList)
@@ -46,7 +44,6 @@ $(function(){
   function initSwiper(fileList) {
     var swiperStr = ''
     for(var i=0; i<fileList.length; i++) {
-      console.log(fileList[i].url)
       swiperStr += '<div class="swiper-slide"><a><img src="' + fileList[i].url + '" /></a></div>'
     }
     $("#swiper").html(swiperStr)

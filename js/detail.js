@@ -9,11 +9,10 @@ $(function(){
   //请求首页banner数据
   $.ajax({
     type: "get",
-    url: 'https://wechat.heng-e.com.cn/platform-admin/hy/advgroupitem/infoForFront/' + id,
+    url: 'https://www.heng-e.com.cn/platform-admin/hy/advgroupitem/infoForFront/' + id,
     data: '',
     dataType: 'JSON',
     success: function(res) {
-      console.log(res)
       if (res.code == 0) {
         $('#detailDate').html(res.advgroupitem.pcHeadName.split("\n").join("<br>"))
         $('#pcHeadImg').attr('src',res.advgroupitem.pcHeadImg)
@@ -29,7 +28,6 @@ $(function(){
   });
 
   function initList(list){
-    console.log(list)
     var listStr = ''
     for(var i=0;i<list.length;i++) {
       listStr += '<div><img src="'+list[i].url+'" alt=""></div>'
@@ -68,6 +66,5 @@ function changeLeft(flag) {
   left = left + bw * flag
   if (left > 0) left = 0
   if (left < bw - iw) left = bw - iw
-  console.log(left)
   $('#iw').css({left: left + 'px'})
 }
